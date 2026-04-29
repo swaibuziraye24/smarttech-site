@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+
+        body {
+    margin: 0;
+    font-family: Arial;
+    background: #f8f9fc;
+}
+
+header {
+    background: linear-gradient(to right, #0a1f44, #1a3a7a);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #0a1f44;
+}
         body {
             margin: 0;
             font-family: Arial;
@@ -111,6 +133,35 @@ header {
     text-align: center;
     padding: 80px 20px;
 }
+
+.services, .projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background: #0a1f44;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
     </style>
 </head>
 
@@ -121,6 +172,11 @@ header {
     <img src="logo.png" width="80">
     <h1>Smart Tech Services</h1>
     <p>Your Trusted Computer & Phone Solutions</p>
+
+    <header>
+    <h1>I Build Simple Websites for Small Businesses</h1>
+    <p>Helping businesses in Uganda get customers online</p>
+    <a href="#contact"><button>Get a Website</button></a>
 
 </header>
 
@@ -135,6 +191,26 @@ header {
     <p>We provide affordable and reliable tech services including phone repair, software installation, and web services.</p>
 </div>
 
+<div class="section">
+    <h2>What I Offer</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Business Websites</h3>
+            <p>Simple websites to show your services and contacts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Website Setup</h3>
+            <p>I put your business online so customers can find you.</p>
+        </div>
+
+        <div class="card">
+            <h3>Support</h3>
+            <p>I help you update and manage your website.</p>
+        </div>
+    </div>
+</div>
 <div class="section" id="services">
     <h2>Our Services</h2>
 
@@ -174,10 +250,44 @@ header {
     </div>
 </div>
 
+<div class="section">
+    <h2>Why Choose Me</h2>
+    <p>✔ Affordable prices</p>
+    <p>✔ Fast delivery</p>
+    <p>✔ Simple and clean design</p>
+</div>
+
+<div class="section">
+    <h2>My Work</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Business Website</h3>
+            <p>Website for a local shop with contact and services.</p>
+        </div>
+
+        <div class="card">
+            <h3>To-Do App</h3>
+            <p>Task management app with add and delete features.</p>
+        </div>
+
+    </div>
+</div>
+
 <div class="section" id="contact">
     <h2>Contact Us</h2>
     <p>📞 Phone: 0700000000</p>
     <p>📍 Location: Kampala, Uganda</p>
+
+    <div class="section" id="contact">
+    <h2>Get Your Website Today</h2>
+    <p>Contact me on WhatsApp to get started</p>
+
+    <a href="https://wa.me/256700000000">
+        <button>Chat on WhatsApp</button>
+    </a>
+    </div>
 </div>
 
 <script>
