@@ -210,6 +210,29 @@ h2 {
     font-weight: bold;
 }
 
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0a1f44;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body {
+    padding-bottom: 60px;
+}
+
+
 .card {
     background: white;
     padding: 20px;
@@ -440,5 +463,11 @@ document.querySelectorAll('a').forEach(anchor => {
 <a href="https://wa.me/256700000000" class="whatsapp">
     💬 Chat on WhatsApp
 </a>
+
+<nav>
+    <a href="#">🏠 Home</a>
+    <a href="#services">🛠 Services</a>
+    <a href="#about">ℹ About</a>
+</nav>
 </body>
 </html>
