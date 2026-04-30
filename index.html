@@ -98,6 +98,67 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* FADE IN */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARD HOVER */
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* BUTTON EFFECT */
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1a3a7a;
+    transform: scale(1.05);
+}
+
+/* NAV HOVER */
+nav a:hover {
+    color: #25D366;
+}
+
+.hero h1 {
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.whatsapp {
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
 </style>
 </head>
 
@@ -112,6 +173,9 @@ button {
 
 <!-- ABOUT -->
 <div class="section" id="about">
+<div class="section fade">
+
+</div>   
     <h2>About Us</h2>
     <p>
         We help small businesses in Uganda get online with simple,
@@ -200,6 +264,19 @@ button {
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
 </nav>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(fade => {
+        const rect = fade.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            fade.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
