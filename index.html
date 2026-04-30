@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Smart Tech Services</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Tech Services</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #f5f7fb;
+    color: #333;
 }
 
 /* HERO */
@@ -16,9 +18,47 @@ body {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url("hero.jpg");
     background-size: cover;
-    color: white;
+    background-position: center;
     text-align: center;
+    color: white;
     padding: 80px 20px;
+}
+
+.hero img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* SECTIONS */
+.section {
+    background: white;
+    margin: 20px auto;
+    padding: 40px 20px;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* NAV */
@@ -27,8 +67,8 @@ nav {
     bottom: 0;
     width: 100%;
     background: #0a1f44;
-    text-align: center;
     padding: 10px;
+    text-align: center;
 }
 
 nav a {
@@ -37,40 +77,26 @@ nav a {
     text-decoration: none;
 }
 
-/* SECTIONS */
-.section {
-    background: white;
-    margin: 20px;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.card {
-    width: 250px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
 /* WHATSAPP */
 .whatsapp {
     position: fixed;
-    right: 20px;
     bottom: 70px;
+    right: 20px;
     background: #25D366;
     color: white;
-    padding: 12px;
+    padding: 12px 18px;
     border-radius: 30px;
     text-decoration: none;
+}
+
+/* BUTTON */
+button {
+    background: #0a1f44;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -79,16 +105,18 @@ nav a {
 
 <!-- HERO -->
 <div class="hero">
+    <img src="logo.png">
     <h1>Smart Tech Services</h1>
-    <p>Computer & Phone Repair + Website Creation</p>
+    <p>Your Trusted Computer, Phone & Website Solutions</p>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
     <h2>About Us</h2>
     <p>
-    We help small businesses in Uganda get online and also fix
-    computers and phones professionally.
+        We help small businesses in Uganda get online with simple,
+        affordable, and professional websites. We also repair computers
+        and phones quickly and reliably.
     </p>
 </div>
 
@@ -97,39 +125,71 @@ nav a {
     <h2>Our Services</h2>
 
     <div class="cards">
+
         <div class="card">
+            <img src="rep.jpg">
             <h3>Computer Repair</h3>
             <p>Fixing hardware and software issues.</p>
         </div>
 
         <div class="card">
+            <img src="repair.jpg">
             <h3>Phone Repair</h3>
-            <p>Screen replacement and fixing faults.</p>
+            <p>Screen replacement and troubleshooting.</p>
         </div>
 
         <div class="card">
-            <h3>Website Creation</h3>
-            <p>Modern websites for your business.</p>
+            <img src="software.jpg">
+            <h3>Software Installation</h3>
+            <p>Windows, apps, antivirus installation.</p>
         </div>
+
+        <div class="card">
+            <img src="website.jpg">
+            <h3>Website Creation</h3>
+            <p>Professional websites for your business.</p>
+        </div>
+
     </div>
 </div>
 
 <!-- WHY -->
 <div class="section">
     <h2>Why Choose Us</h2>
-    <p>✔ Affordable</p>
+    <p>✔ Affordable pricing</p>
     <p>✔ Fast service</p>
-    <p>✔ Reliable</p>
+    <p>✔ Reliable support</p>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section">
+    <h2>What Clients Say</h2>
+
+    <div class="cards">
+        <div class="card">
+            <p>"Very professional and fast service!"</p>
+            <strong>- Kampala Client</strong>
+        </div>
+
+        <div class="card">
+            <p>"My business now looks great online."</p>
+            <strong>- Local Shop Owner</strong>
+        </div>
+    </div>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-    <h2>Contact</h2>
+    <h2>Contact Us</h2>
     <p>📞 +256705816160</p>
-    <p>📍 Kampala</p>
+    <p>📍 Kampala, Uganda</p>
+
+    <a href="https://wa.me/256705816160">
+        <button>Chat on WhatsApp</button>
+    </a>
 </div>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/256705816160" class="whatsapp">
 💬 Chat
 </a>
